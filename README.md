@@ -42,14 +42,40 @@ class ExampleTaskController extends AbstractController
 
 ```
 
+```php
+
+<?php
+
+namespace app\commands;
+
+/**
+ * Class Example2TaskController
+ * @package app\commands
+ */
+class Example2TaskController extends AbstractController
+{
+    /**
+     * ежедневно
+     */
+    public function actionDaily()
+    {
+        $this->info('run action two daily');
+    }
+}
+
+```
+
 ## run example 
 
 ```bash
 
-$ ./yii task/daily
-2017-09-20 13:30:16 [INFO] task/daily run
-2017-09-20 13:30:16 [INFO] run action daily
-2017-09-20 13:30:16 [INFO] example-task/daily done
-2017-09-20 13:30:16 [INFO] task/daily done
+$./yii task/daily
+2017-09-20 14:06:56 [INFO] task/daily run
+2017-09-20 14:06:56 [INFO] run action two daily
+2017-09-20 14:06:56 [INFO] example2-task/daily done
+2017-09-20 14:06:56 [INFO] run action daily
+2017-09-20 14:06:56 [INFO] example-task/daily done
+2017-09-20 14:06:56 [INFO] task/daily done
+
 
 ```
